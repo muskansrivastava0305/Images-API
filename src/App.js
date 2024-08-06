@@ -26,11 +26,12 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{alignItems:'center'}}>
       <ul>
         {records.map((record, index) => (
           <li key={index}>
             <img src={record.download_url} alt={record.author} style={{ width: 250, height: 200, display: 'flex', margin: '20px' }} />
+            <p style={{ fontSize: 16, fontWeight: 'bold' }}>{record.author}</p>
             <button onClick={() => handleDownload(record)} style={{ backgroundColor: 'green', color: 'white', marginBottom: '2rem', }}>Download</button>
           </li>
         ))}
